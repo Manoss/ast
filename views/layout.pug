@@ -5,5 +5,21 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
   body
-    block content
-script(src='/javascripts/bootstrap.min.js')
+    header 
+      nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark 
+        div.container-fluid 
+          a.navbar-brand(href='#') Evènements
+          button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarCollapse', aria-controls='navbarCollapse', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon 
+          #navbarCollapse.collapse.navbar-collapse 
+            ul.navbar-nav.me-auto.mb-2.mb-md-0 
+              li.nav-item 
+                a.nav-link(href='#', aria-current="page") 10 derniers évènements
+            form.d-flex
+              input.form-control.me-2(type='search', placeholder='Recherche', aria-label='Recherche')
+              button.btn.btn-outline-success(type='submit') Rechercher     
+    main.flex-shrink-0 
+      div.container.bg-light.p-5.rounded
+        block content
+
+script(src='/javascripts/bootstrap.bundle.min.js')
