@@ -2,4 +2,34 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+
+  form
+    div.form-floating.mb-3 
+      input.form-control(type='text', id='floatingName', placeholder='Nom')
+      label.form-label(for='floatingName') Nom
+    div.form-floating.mb-3
+      input.form-control(type='password', id='inputPassword', placeholder='Password')
+      label.form-label(for='inputPassword') Password
+    div.form-check.mb-3
+      input.form-check-input(type='checkbox', value="", id="flexCheckAstreinte").disabled
+      label.form-check-label(for="flexCheckAstreinte") Astreinte
+    select.form-select(aria-label="Secteur").mb-3
+      option.selected Secteur 
+      option(value="EXPE") Expédition
+      option(value="PC1") PC1
+      option(value="PC2") PC2
+      option(value="SPZ") Serpaize 
+      option(value="SQF") Saint-Quentin-Fallavier
+      option(value="VAPO") Vapocraqueur
+      option(value="VEMU") VEMU
+      option(value="VIRIAT") Viriat 
+    .form-floating.mb-3 
+      textarea#flexTextareaActions.form-control.form-label(placeholder='Actions Réalisées', style="height: 150px")
+      label.form-label(for="flexTextareaActions") Actions Réalisées
+    .mb-3
+      input#formFile.form-control(type="file")
+      label.form-label(for="formfile") 
+
+      
+    button.btn.btn-primary(type='submit') Enregistrer
+        
