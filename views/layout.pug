@@ -1,10 +1,13 @@
 doctype html
 html
   head
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap-table.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    
+    
   body
     header 
       .row 
@@ -17,8 +20,6 @@ html
               #navbarCollapse.collapse.navbar-collapse 
                 ul.navbar-nav.me-auto.mb-2.mb-md-0 
                   li.nav-item 
-                    a.nav-link(href='#', aria-current="page") 10 derniers incidents
-                  li.nav-item 
                       a.nav-link(href='/event/new', aria-current="page") Créer un incident
                 form.d-flex
                   input.form-control.me-2(type='search', placeholder='Recherche', aria-label='Recherche')
@@ -28,5 +29,6 @@ html
         .col-12 
           div.container.bg-light.p-5.rounded
             block content
-
+script(src='/javascripts/jquery-3.5.1.min.js')
 script(src='/javascripts/bootstrap.bundle.min.js')
+script(src='/javascripts/bootstrap-table.min.js')

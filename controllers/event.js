@@ -10,7 +10,16 @@ const index = (req, res) => {
     });
 }
 
-const event = (req, res) => {
+const create = (req, res) => {
+
+    return res
+    .status(200)
+    .render('event-form', {
+        title : 'Créer un Incident'
+    });
+}
+
+const doCreate = (req, res) => {
 
     return res
     .status(200)
@@ -21,5 +30,6 @@ const event = (req, res) => {
 
 module.exports = {
     index,
-    event
+    create,
+    doCreate
 }

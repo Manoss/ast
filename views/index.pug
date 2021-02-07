@@ -3,3 +3,17 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  table(data-toggle="table", data-pagination="true", data-search="true")
+    thead 
+      th(data-sortable="true") Item ID 
+      th Item Name 
+      th Item Price 
+    tbody 
+      tr 
+        td 1
+        td Item 1
+        td $1
+      tr 
+        td 2
+        td Item 2
+        td $2

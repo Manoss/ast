@@ -9,7 +9,7 @@ router
 
 router
   .route('/event/new')
-  .get(ctrlEvent.event)
-  .post();
+  .get(ctrlEvent.create)
+  .post(ctrlEvent.doCreate);
 
 module.exports = router

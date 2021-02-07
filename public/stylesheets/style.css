@@ -1,3 +1,13 @@
+@media only screen 
+  and (min-width: 320px)
+  and (max-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+      font: 8px "Lucida Grande", Helvetica, Arial, sans-serif;
+      background-color: aqua;
+    }
+
+}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -7,6 +17,3 @@ a {
   color: #00B7FF;
 }
 
-textarea {
-  height: 150px;
-}
